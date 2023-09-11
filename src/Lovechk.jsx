@@ -70,24 +70,22 @@ const Lovechk = () => {
                 onChange={(e) => setMan(e.target.value)} // Uncommented this line
             />}
 
-           {t  && <textarea id="text"
+           {t  && <Textarea id="text"
+                isInvalid placeholder=''
                 cols="30"
                 rows="10"
                 placeholder="What You Think About Your Partner."
                 value={massage}
                 onChange={(e) => setMassage(e.target.value)}>
-            </textarea>}
+            </Textarea>}
             
-            {t && <button type="submit">Calculate Love ❤ ❣</button>}
-            <Button leftIcon={<MdBuild />} colorScheme='pink' variant='solid'>
-    Settings
-  </Button>
+            {t && <Button colorScheme='pink' variant='solid' type="submit">Calculate Love ❤ </Button>}
+  
             {!t&& <h1>{women}</h1>}
             {!t&& <h1>{man}</h1>}
             {!t && <p>{massage}</p>}
             {!t &&<button id="btn2" onClick={handleClear} >Check Again</button>}
         </form>
-        <img src="https://64fe1057d0af9f5a6c6bc5ab--fanciful-moonbeam-9405d6.netlify.app/icon.png" alt="" />
         </div>
         
     )
