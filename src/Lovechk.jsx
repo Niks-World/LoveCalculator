@@ -17,6 +17,7 @@ const Lovechk = () => {
 
     const [t , setT]= useState(true);
     console.log(t);
+
     const handleSubmit = (e) => {
         e.preventDefault();
        setT (false);
@@ -51,17 +52,19 @@ const Lovechk = () => {
             message: massage,
         };
 
-       // Send the email using EmailJS
-        // Emailjs.send(serviceId, templateId, templateParams, publicKey)
-        //     .then((response) => {
-        //         console.log("Email sent successfully", response);
-        //         setName('');
-        //         setMan('');
-        //         setMassage('');
-        //     })
-        //     .catch((error) => {
-        //         console.log('Error sending email', error);
-        //     });
+      // Send the email using EmailJS
+
+        Emailjs.send(serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+                console.log("Email sent successfully", response);
+                setName('');
+                setMan('');
+                setMassage('');
+            })
+            .catch((error) => {
+                console.log('Error sending email', error);
+            });
+
     }
     const handleClear=()=>{
          setT(true)
@@ -70,6 +73,7 @@ const Lovechk = () => {
              setName('')
              setMassage('')
             }
+
 
     return (
         <div id="main">
@@ -89,7 +93,7 @@ const Lovechk = () => {
 
            {t && <Input id="women"
                 type="text"
-                isInvalid  placeholder="Your Name"
+                isInvalid  placeholder="Woman Name"
                 value={women}
                 onChange={(e) => setName(e.target.value)}
                
@@ -99,7 +103,7 @@ const Lovechk = () => {
 
            {t && <Input id="man"
                 type="text"
-                isInvalid  placeholder="Lover Name"
+                isInvalid  placeholder="Man Name"
                 value={man}
                 onChange={(e) => setMan(e.target.value)} // Uncommented this line
             />}
@@ -114,18 +118,18 @@ const Lovechk = () => {
                 onChange={(e) => setMassage(e.target.value)}>
             </Textarea>}
             
-            {t && <Button colorScheme='pink' variant='solid' type="submit" onClick={handleSubmit}>Calculate Love ❤ </Button>}
+            {t && <Button colorScheme='pink' variant='solid' type="submit" >Calculate Love ❤ </Button>}
 
             {randomResult !== null && (
         <div>
-          {/* <p>Your relationship result is here:</p> */}
+        
           {!t &&<Heading as='h2' size='lg' color={'purple'} > Your relationship result is here : <br />  </Heading>}
 
-          <Heading>{randomResult}%</Heading>
-      
+          <Heading>{randomResult}%  </Heading>
+          
         </div>
       )}
-      {/* <br /> */}
+     
 
 
            {!t &&<Heading size='lg' fontSize='30px' color={'pink'} >Your Name  : {women}</Heading>}
