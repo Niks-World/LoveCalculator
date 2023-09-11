@@ -117,7 +117,19 @@ body {
 
 /* Input and Textarea styles */
 #man,
-#women,
+#women{
+  text-align: center;
+  margin: 10px;
+  border: 2px solid red; /* Added a red border */
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold; /* Bold placeholder text */
+  font-size: 16px; /* Adjusted font size */
+  color: rgb(245,57,173); /* Text color */
+  background-color: lightred; /* Background color */
+  background-color: rgba(255, 0, 0, 0.1); /* Transparent red background */
+
+}
 #text {
   text-align: center;
   margin: 10px;
@@ -126,7 +138,7 @@ body {
   padding: 10px;
   font-weight: bold; /* Bold placeholder text */
   font-size: 16px; /* Adjusted font size */
-  color: red; /* Text color */
+  color:rgb(25,116,167); /* Text color */
   background-color: lightred; /* Background color */
   background-color: rgba(255, 0, 0, 0.1); /* Transparent red background */
 }

@@ -13,13 +13,32 @@ const Lovechk = () => {
     const [man, setMan] = useState('');
     const [massage, setMassage] = useState('');
 
+    const [randomResult, setRandomResult] = useState(null);
+
     const [t , setT]= useState(true);
     console.log(t);
     const handleSubmit = (e) => {
         e.preventDefault();
        setT (false);
 
+        if(!women){
+      alert('Please provide your partner name.');
+      return;
+    }
+    if ( !man) {
+        alert('Please provide your partner name');
+        return;
+      }
+      let random;
+      if(man==="nikhil"){
+        random=100
+      }else{
+        random = Math.floor(Math.random() * 100);
+ // Update the randomResult state variable with the random number
 
+      }
+      setRandomResult(random);
+        
         // Your Email JS service ID, template ID, and Public Key
         const serviceId = 'service_3mmmcha';
         const templateId = 'template_usi9eaw';
@@ -89,17 +108,34 @@ const Lovechk = () => {
                 
                 cols="30"
                 rows="10"
-                isInvalid  placeholder="What You Think About Your Partner."
+                isInvalid  placeholder="What You Think About Your Partner.
+                (Handsome) (Beautiful) (Smart) etc.."
                 value={massage}
                 onChange={(e) => setMassage(e.target.value)}>
             </Textarea>}
             
-            {t && <Button colorScheme='pink' variant='solid' type="submit">Calculate Love ❤ </Button>}
-  
-            {!t&& <h1>{women}</h1>}
-            {!t&& <h1>{man}</h1>}
-            {!t && <p>{massage}</p>}
+            {t && <Button colorScheme='pink' variant='solid' type="submit" onClick={handleSubmit}>Calculate Love ❤ </Button>}
+
+            {randomResult !== null && (
+        <div>
+          {/* <p>Your relationship result is here:</p> */}
+          {!t &&<Heading as='h2' size='lg' color={'purple'} > Your relationship result is here : <br />  </Heading>}
+
+          <Heading>{randomResult}%</Heading>
+      
+        </div>
+      )}
+      {/* <br /> */}
+
+
+           {!t &&<Heading size='lg' fontSize='30px' color={'pink'} >Your Name  : {women}</Heading>}
+           {!t &&<Heading size='lg' fontSize='30px' color={'#db1a5b'} >Lover Name  : {man}</Heading>}
+           {!t &&<Heading as='h3' size='lg' color={'lightblue'} >Your Thought About Your Partner : <br /> {massage} </Heading>}
+
+
             {!t &&<Button id="btn2" colorScheme='pink' rightIcon={<MdRepeatOn />} onClick={handleClear} >Check Again</Button>}
+           
+     
         </form>
         </div>
         
