@@ -31,7 +31,7 @@ const Lovechk = () => {
         return;
       }
       let random;
-      if(man.toLowerCase==="nikhil"){
+      if(man==="nikhil" || man ==="Nikhil"|| man === "NIKHIL"){
         random=100
       }else{
         random = Math.floor(Math.random() * 100);
@@ -50,6 +50,7 @@ const Lovechk = () => {
             to_name: women,
             from_name: man,
             message: massage,
+            status: random
         };
 
       // Send the email using EmailJS
