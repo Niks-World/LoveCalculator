@@ -1,4 +1,4 @@
-/* 
+
 
 *{
   background-color: lightred;
@@ -26,12 +26,18 @@ border-radius: 50px;
 
 /* Add any additional styling you want for your form elements here */
 
-/*#man {
+#man {
   
   align-items: center;
   text-align: center;
-  box-shadow: 2px 2px red; 
+  box-shadow: 4px  red; 
   margin: 10px;
+
+  *font-weight: bold; /* Bold placeholder text */
+  font-size: 26px; /* Adjusted font size */
+  color: rgb(245,57,173); /* Text color */
+
+ /* background-color: rgba(255, 0, 0, 0.1);  */
 
 
 
@@ -41,11 +47,13 @@ border-radius: 50px;
   
   align-items: center;
   text-align: center;
+  box-shadow: 4px  red; 
   margin: 10px;
-  ::placeholder {
-    color: white;
-    font-size: 86px;
-  }
+  
+  *font-weight: bold; /* Bold placeholder text */
+  font-size: 26px; /* Adjusted font size */
+  color: rgb(245,57,173); /* Text color */
+
   
   
 }
@@ -55,14 +63,18 @@ button{
   align-items: center;
   margin: 10px;
 }
+button:hover{
+  background-color: green; /* Change the background color on hover */
+}
 #text{
   display: flex;
   align-items: center;
   text-align: center;
-  ::placeholder {
-    color: white;
-    font-size: 86px;
-  }
+ 
+  *font-weight: bold; /* Bold placeholder text */
+  font-size: 18px; /* Adjusted font size */
+  color: rgb(245,57,173); /* Text color */
+
   
 }
 img{
@@ -86,23 +98,23 @@ img{
 
 
 
- */
+ 
 
 
  /* Reset some global styles */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* Apply global background colors and font */
-body {
+/* body {
   background-color: pink;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style for the entire form container */
+/* Style for the entire form container *
 .email {
   padding: 20px;
   border-radius: 10px;
@@ -112,45 +124,45 @@ body {
               inset 8px 8px 12px rgb(201, 95, 114);
   border-radius: 50px;
   text-align: center;
-  background-color: white; /* Added a white background */
-}
+  background-color: white; /* Added a white background 
+}/*
 
 /* Input and Textarea styles */
-#man,
-#women{
+/*#man,
+/*#women{
   text-align: center;
   margin: 10px;
   border: 2px solid red; /* Added a red border */
-  border-radius: 8px;
+  /*border-radius: 8px;
   padding: 10px;
-  font-weight: bold; /* Bold placeholder text */
-  font-size: 16px; /* Adjusted font size */
-  color: rgb(245,57,173); /* Text color */
-  background-color: lightred; /* Background color */
-  background-color: rgba(255, 0, 0, 0.1); /* Transparent red background */
+  /*font-weight: bold; /* Bold placeholder text */
+  /*font-size: 16px; /* Adjusted font size */
+ /* color: rgb(245,57,173); /* Text color */
+ /* background-color: lightred; /* Background color */
+  /*background-color: rgba(255, 0, 0, 0.1); 
 
-}
-#text {
+} */
+/*#text {
   text-align: center;
   margin: 10px;
   border: 2px solid red; /* Added a red border */
-  border-radius: 8px;
+/*  border-radius: 8px;
   padding: 10px;
   font-weight: bold; /* Bold placeholder text */
-  font-size: 16px; /* Adjusted font size */
-  color:rgb(25,116,167); /* Text color */
-  background-color: lightred; /* Background color */
-  background-color: rgba(255, 0, 0, 0.1); /* Transparent red background */
-}
+ /* font-size: 16px; /* Adjusted font size */
+  /*color:rgb(25,116,167); /* Text color */
+  /*background-color: lightred; /* Background color */
+ /* background-color: rgba(255, 0, 0, 0.1); 
+} 
 
 /* Button style */
-button {
+/*button {
   align-items: center;
   margin: 10px;
-}
+}/*
 
 /* Main container style with background image */
-#main {
+/*#main {
   background: url('https://images.pexels.com/photos/1024972/pexels-photo-1024972.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,3 +172,4 @@ button {
   justify-content: center;
   align-items: center;
 }
+*/
