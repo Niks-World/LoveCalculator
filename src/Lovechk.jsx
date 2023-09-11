@@ -34,7 +34,7 @@ const Lovechk = () => {
       if(man==="nikhil" || man ==="Nikhil"|| man === "NIKHIL"){
         random=100
       }else{
-        random = Math.floor(Math.random() * 100);
+        random = Math.floor(Math.random() * 51) + 50;
  // Update the randomResult state variable with the random number
 
       }
