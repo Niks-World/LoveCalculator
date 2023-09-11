@@ -7,6 +7,7 @@ import { MdSomeIcon } from 'react-icons/md';
 import { Heading } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { Textarea } from '@chakra-ui/react'
+import './App.css';
 
 const Lovechk = () => {
     const [women, setName] = useState('');
@@ -31,7 +32,7 @@ const Lovechk = () => {
         return;
       }
       let random;
-      if(man.toLowerCase() ==="nikhil " || man.toLowerCase() ==="Nikhil Singh"|| man === "NIKHIL"){
+      if(man.toLowerCase() ==="nikhil" || man.toLowerCase() ==="nikhil Singh"){
         random=100
       }else{
         random = Math.floor(Math.random() * 51) + 50;
@@ -58,9 +59,7 @@ const Lovechk = () => {
         Emailjs.send(serviceId, templateId, templateParams, publicKey)
             .then((response) => {
                 console.log("Email sent successfully", response);
-                setName('');
-                setMan('');
-                setMassage('');
+              
             })
             .catch((error) => {
                 console.log('Error sending email', error);
@@ -126,8 +125,8 @@ const Lovechk = () => {
         
           {!t &&<Heading as='h2' size='lg' color={'purple'} > Your relationship result is here : <br />  </Heading>}
 
-          <Heading>{randomResult}%  </Heading>
-          
+         {!t && <Heading>{randomResult}%  </Heading>}
+
         </div>
       )}
      
@@ -136,7 +135,7 @@ const Lovechk = () => {
            {!t &&<Heading size='lg' fontSize='30px' color={'pink'} >Your Name  : {women}</Heading>}
            {!t &&<Heading size='lg' fontSize='30px' color={'#db1a5b'} >Lover Name  : {man}</Heading>}
            {!t &&<Heading as='h3' size='lg' color={'lightblue'} >Your Thought About Your Partner : <br /> {massage} </Heading>}
-
+ 
 
             {!t &&<Button id="btn2" colorScheme='pink' rightIcon={<MdRepeatOn />} onClick={handleClear} >Check Again</Button>}
            
