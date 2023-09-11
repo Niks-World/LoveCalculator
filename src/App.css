@@ -69,6 +69,8 @@ border-radius: 50px;
 #man{
 /* display: flex; */
 align-items: center;
+text-align: center;
+  
 }
 
 #women{
@@ -84,7 +86,9 @@ button{
 }
 #text{
   display: flex;
-  /* align-items: center; */
+  align-items: center;
+  text-align: center;
+  
 }
 
 

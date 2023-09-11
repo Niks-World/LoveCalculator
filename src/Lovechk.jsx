@@ -5,7 +5,8 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 import { MdBuild , MdCall } from "react-icons/md"
 import { MdSomeIcon } from 'react-icons/md';
 import { Heading } from '@chakra-ui/react'
-
+import { Input } from '@chakra-ui/react'
+import { Textarea } from '@chakra-ui/react'
 
 const Lovechk = () => {
     const [women, setName] = useState('');
@@ -54,14 +55,15 @@ const Lovechk = () => {
     return (
         <div>
         <form onSubmit={handleSubmit} className="email">
-           {t && <input id="women"
+           {t && <Input id="women"
                 type="text"
                 placeholder="Your Name"
                 value={women}
                 onChange={(e) => setName(e.target.value)}
             />}
+            
 
-           {t && <input id="man"
+           {t && <Input id="man"
                 type="text"
                 placeholder="Lover Name"
                 value={man}
