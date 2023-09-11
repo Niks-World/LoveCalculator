@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Emailjs from '@emailjs/browser';
 import { Button, ButtonGroup } from '@chakra-ui/react'
-import { MdBuild , MdCall } from "react-icons/md"
+import { MdBuild , MdCall, MdRepeatOn, MdRepeatOne } from "react-icons/md"
 import { MdSomeIcon } from 'react-icons/md';
 import { Heading } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
@@ -32,7 +32,7 @@ const Lovechk = () => {
             message: massage,
         };
 
-        // Send the email using EmailJS
+       // Send the email using EmailJS
         // Emailjs.send(serviceId, templateId, templateParams, publicKey)
         //     .then((response) => {
         //         console.log("Email sent successfully", response);
@@ -53,28 +53,43 @@ const Lovechk = () => {
             }
 
     return (
-        <div>
+        <div id="main">
+           
+
         <form onSubmit={handleSubmit} className="email">
+        <Heading style={{ color: "red", marginTop: "10px" }}>Love Calculator</Heading>
+
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <img
+                    src="https://64fe1057d0af9f5a6c6bc5ab--fanciful-moonbeam-9405d6.netlify.app/icon.png"
+                    width="20px"
+                    height="80px"
+                    alt=""
+                />
+            </div>
+
            {t && <Input id="women"
                 type="text"
-                placeholder="Your Name"
+                isInvalid  placeholder="Your Name"
                 value={women}
                 onChange={(e) => setName(e.target.value)}
+               
+                
             />}
             
 
            {t && <Input id="man"
                 type="text"
-                placeholder="Lover Name"
+                isInvalid  placeholder="Lover Name"
                 value={man}
                 onChange={(e) => setMan(e.target.value)} // Uncommented this line
             />}
 
            {t  && <Textarea id="text"
-                isInvalid placeholder=''
+                
                 cols="30"
                 rows="10"
-                placeholder="What You Think About Your Partner."
+                isInvalid  placeholder="What You Think About Your Partner."
                 value={massage}
                 onChange={(e) => setMassage(e.target.value)}>
             </Textarea>}
@@ -84,7 +99,7 @@ const Lovechk = () => {
             {!t&& <h1>{women}</h1>}
             {!t&& <h1>{man}</h1>}
             {!t && <p>{massage}</p>}
-            {!t &&<button id="btn2" onClick={handleClear} >Check Again</button>}
+            {!t &&<Button id="btn2" colorScheme='pink' rightIcon={<MdRepeatOn />} onClick={handleClear} >Check Again</Button>}
         </form>
         </div>
         
