@@ -31,7 +31,7 @@ const Lovechk = () => {
         return;
       }
       let random;
-      if(man==="nikhil" || man ==="Nikhil"|| man === "NIKHIL"){
+      if(man.toLowerCase() ==="nikhil " || man.toLowerCase() ==="Nikhil Singh"|| man === "NIKHIL"){
         random=100
       }else{
         random = Math.floor(Math.random() * 51) + 50;
